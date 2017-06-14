@@ -49,8 +49,15 @@ class ViewController: UIViewController {
     
     func refreshClick(_ refresh: UIRefreshControl){
         
-        let hud = FPProgressHUD.init(numberOfCircles: 3, internalSpacing: 3, radius: 15, delay: 0.2, duration: 0.8, Color: colorArr[2],autoHide:false)
+        let hud = FPProgressHUD.init(numberOfCircles: 3,
+                                     internalSpacing: 3,
+                                     radius: 15,
+                                     delay: 0.2,
+                                     duration: 0.8,
+                                     Color: colorArr[2],
+                                     autoHide:false)
         hud.show()
+        hud.hide()
         //MARK:-GCD延时执行
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+5) {
             
@@ -103,7 +110,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let num = (Int(arc4random()) % colorArr.count)
-        let hud = FPProgressHUD.init(numberOfCircles: indexPath.row+1, internalSpacing: 3, radius: 15, delay: 0.2, duration: 0.8, Color: colorArr[num],autoHide:true)
+        let hud = FPProgressHUD.init(numberOfCircles: indexPath.row+1, internalSpacing: 3, radius: 15, delay: 0.2, duration: 0.8, Color: UIColor.orange,autoHide:false)
         hud.show()
         //MARK:-DCG延时执行
         //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+10) {
