@@ -60,7 +60,7 @@ hud.hide()
 
 1. Example
 
-![Example](https://github.com/Friendpeng/FPProgressHUD/tree/master/Docs/Example.gif)
+![Example](https://github.com/Friendpeng/FPProgressHUD/blob/master/Docs/Example.gif)
 
 
 
